@@ -28,7 +28,7 @@ function App() {
     setError('');
     
     try {
-      const response = await fetch('http://localhost:5000/business-data', {
+      const response = await fetch('https://businessdashboard-rnch.onrender.com/business-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function App() {
     
     try {
       const response = await fetch(
-        `http://localhost:5000/regenerate-headline?name=${encodeURIComponent(formData.name)}&location=${encodeURIComponent(formData.location)}`
+        `https://businessdashboard-rnch.onrender.com/regenerate-headline?name=${encodeURIComponent(formData.name)}&location=${encodeURIComponent(formData.location)}`
       );
       
       if (!response.ok) throw new Error('Failed to regenerate headline');
